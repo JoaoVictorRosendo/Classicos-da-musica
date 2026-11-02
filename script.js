@@ -1,4 +1,4 @@
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+import { validarBusca, formatarPeriodo, traduzirEpoca } from "./utils.js";
 import { validarBusca, formatarPeriodo } from "./utils.js";
 
 // Troque pelos dados de Project Settings > API (chave anon public).
@@ -48,7 +48,7 @@ function mostrarCompositores(lista) {
   lista.forEach((c) => {
     const card = el("article", "", { className: "card" });
     if (c.portrait) card.append(el("img", "", { src: c.portrait, alt: `Retrato de ${c.complete_name}`, loading: "lazy" }));
-    card.append(el("h3", c.complete_name), el("small", `${formatarPeriodo(c.birth, c.death)} · ${c.epoch}`));
+    card.append(el("h3", c.complete_name), el("small", `${formatarPeriodo(c.birth, c.death)} · ${traduzirEpoca(c.epoch)}`));
     const ac = el("div", "", { className: "acoes" });
     ac.append(
       botao("Ver obras", () => verObras(c)),
