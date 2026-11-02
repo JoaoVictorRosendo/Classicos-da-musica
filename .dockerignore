@@ -1,0 +1,10 @@
+.git
+.github
+node_modules
+README.md
+schema.sql
+package*.json
+*.test.js
+*.png
+Dockerfile
+.dockerignore
