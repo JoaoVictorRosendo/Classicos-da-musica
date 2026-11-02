@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Partitura · Grandes compositores e suas obras</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="script.js"></script>
+</head>
+<body>
+  <header class="topo">
+    <h1>Partitura</h1>
+    <p>Os grandes compositores da música clássica e suas obras mais tocadas.</p>
+    <form id="form-busca" role="search">
+      <input id="busca" type="search" placeholder="Buscar compositor (ex.: Bach, Chopin)" aria-label="Buscar compositor">
+      <button type="submit">Buscar</button>
+    </form>
+    <p id="msg" role="status"></p>
+  </header>
+  <main>
+    <section><h2 id="titulo-resultados">Compositores em destaque</h2><div id="compositores" class="grade"></div></section>
+    <section id="sec-obras" hidden><h2 id="titulo-obras"></h2><ul id="obras" class="lista"></ul></section>
+    <section><h2>Meus favoritos</h2><ul id="favoritos" class="lista"></ul></section>
+  </main>
+</body>
+</html>

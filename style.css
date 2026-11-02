@@ -1,0 +1,26 @@
+:root{--vinho:#3b0f1c;--marfim:#f3ece0;--ouro:#c9a24b;--tinta:#241a17;--linha:#d9cdb8}
+*{box-sizing:border-box}
+body{margin:0;background:var(--marfim);color:var(--tinta);font:18px/1.6 "Cormorant Garamond",Georgia,serif}
+.topo{background:var(--vinho);color:var(--marfim);padding:3rem 1.5rem 2rem;text-align:center}
+h1{font-size:clamp(2.6rem,8vw,4.5rem);letter-spacing:.04em;margin:0;font-weight:500;font-style:italic}
+.topo p{margin:.3rem 0 1.4rem;color:#e4d6bb}
+form{display:flex;gap:.5rem;max-width:34rem;margin:auto}
+input{flex:1;padding:.7rem 1rem;border:1px solid var(--ouro);background:transparent;color:inherit;font:inherit}
+input::placeholder{color:#cdbf9f}
+button{font:inherit;padding:.5rem 1rem;border:1px solid var(--ouro);background:var(--ouro);color:var(--vinho);cursor:pointer}
+button.sec{background:transparent;color:inherit;border-color:var(--linha)}
+button:hover{filter:brightness(1.08)}
+:focus-visible{outline:3px solid var(--ouro);outline-offset:2px}
+#msg{min-height:1.5em;color:#f0c9c9}
+main{max-width:64rem;margin:auto;padding:1.5rem}
+h2{font-weight:500;border-bottom:1px solid var(--linha);padding-bottom:.3rem}
+.grade{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1.2rem}
+.card{border:1px solid var(--linha);padding:1rem;background:#fbf7ef;display:flex;flex-direction:column;gap:.3rem}
+.card img{width:100%;aspect-ratio:1;object-fit:cover;object-position:top;filter:sepia(.35)}
+.card h3{margin:.3rem 0 0;font-size:1.25rem}
+.card small{color:#6b5a4f}
+.acoes{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:auto;padding-top:.5rem}
+.lista{list-style:none;padding:0}
+.lista li{display:flex;justify-content:space-between;gap:1rem;align-items:center;padding:.6rem 0;border-bottom:1px solid var(--linha)}
+.vazio{color:#6b5a4f;font-style:italic}
+@media(max-width:520px){.lista li{flex-direction:column;align-items:flex-start}}
